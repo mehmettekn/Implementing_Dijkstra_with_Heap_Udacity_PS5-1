@@ -100,7 +100,6 @@ class priority_dict(dict):
 """ Here is my code, modified with heaps using priority_dict class"""
 
 def dijkstra(G,v):
-    #dist_so_far = [[0, v]]
     dist_so_far = priority_dict()
     dist_so_far[v] = 0
     final_dist = {}
@@ -206,14 +205,13 @@ def test3(N):
     print 'dist', dist
     print 'dist2', dist2
     print dist == dist2
-    counter = 1
+    counter = 0
     for key in dist:
            if dist2[key] != dist[key]:
                print 'dist2', key,':',dist2[key],'dist1',key,':',dist1[key]
                counter += 1
     print 'times wrong', counter
-
+    print len(dist)
 print test3(1200)
-
      
 
